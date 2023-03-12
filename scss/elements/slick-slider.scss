@@ -1,0 +1,43 @@
+@import "../global";
+
+.slick-slider {
+  width: 100vw;
+  height: 100vh;
+  height: calc( 100vh - 4rem );
+  position: relative;
+  display: block;
+  background: black;
+
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+  &:hover {
+  }
+
+  .slick-list, .slick-track, figure, figcaption, img {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+  .slick-list, .slick-track, figure, img {
+    height: 100%;
+  }
+  figcaption {
+    min-height: 1rem;
+    text-align: center;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  img {
+    height: calc( 100% - 1rem );
+    object-position: center;
+    object-fit: contain;
+
+  }
+}

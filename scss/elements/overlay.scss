@@ -1,0 +1,40 @@
+@import "../global";
+
+.overlay {
+  //position: absolute;
+  position: fixed;
+  //height: 90vh;
+  //width: 47vw;
+  //left: 3vw;
+  z-index: 999;
+  //margin-top: 5.1vh;
+  background: grey;
+
+  width: 100vw;
+  height: 90vh;
+  bottom: 0;
+  left: 0;
+
+  overflow-y: auto;
+
+  transform: translateY( 100vh );
+  transition: transform .4s ease;
+
+  @include mobile {
+    width: 100vw;
+    left: 0vw;
+  }
+
+  &.open {
+    transform: translateY( 0vh );
+  }
+
+  .o-content {
+    height: auto;
+    position: relative;
+    display: block;
+    background: red;
+    text-align: left;
+    color: #000;
+  }
+}

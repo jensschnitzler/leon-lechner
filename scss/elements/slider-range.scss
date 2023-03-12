@@ -1,0 +1,58 @@
+@import "../global";
+
+$size: 3rem;
+$bg-color: grey;
+
+
+input[type=range].slider-range {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  width: auto;
+  background: transparent; /* Otherwise white in Chrome */
+  background: $bg-color;
+  height: $size;
+  border-radius: $size;
+  display: block;
+  margin: 0 .5rem;
+  padding: 0;
+
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: $size;
+    width: $size;
+    background: $bg-color;
+    cursor: pointer;
+    border-radius: $size;
+    border: 1px solid white;
+    box-sizing: content-box;
+    margin-top: -1px;
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+    &:hover {
+      background-color: black;
+    }
+  }
+
+  &:hover {
+    &::-webkit-slider-thumb {
+      background-color: black;
+    }
+  }
+
+  &:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+}

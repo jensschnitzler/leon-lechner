@@ -1,0 +1,126 @@
+@font-face {
+	font-family: 'SuisseIntl-Regular';
+	src: url('../fonts/SuisseIntl-Regular-WebM.woff2');
+	/* IE9 Compat Modes */
+	src: url('../fonts/SuisseIntl-Regular-WebM.eot?#iefix') format('embedded-opentype'),
+	/* IE6-IE8 */
+	url('../fonts/SuisseIntl-Regular-WebM.woff2') format('woff2'),
+	/* Super Modern Browsers */
+	url('../fonts/SuisseIntl-Regular-WebM.woff') format('woff'),
+	/* Pretty Modern Browsers */
+	url('../fonts/SuisseIntl-Regular-WebM.ttf') format('truetype'),
+	/* Safari, Android, iOS */
+	url('SuisseIntl-Regular.otf#svg') format('svg');
+	/* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'SuisseIntl-RegularItalic';
+	src: url('../fonts/SuisseIntl-RegularItalic-WebM.woff2');
+	/* IE9 Compat Modes */
+	src: url('../fonts/SuisseIntl-RegularItalic-WebM.eot?#iefix') format('embedded-opentype'),
+	/* IE6-IE8 */
+	url('../fonts/SuisseIntl-RegularItalic-WebM.woff2') format('woff2'),
+	/* Super Modern Browsers */
+	url('../fonts/SuisseIntl-RegularItalic-WebM.woff') format('woff'),
+	/* Pretty Modern Browsers */
+	url('../fonts/SuisseIntl-RegularItalic-WebM.ttf') format('truetype'),
+	/* Safari, Android, iOS */
+	url('SuisseIntl-RegularItalic.otf#svg') format('svg');
+	/* Legacy iOS */
+}
+
+
+// ----- Imports
+
+@import "global";
+@import "elements/slider-range";
+@import "elements/slick-slider";
+@import "elements/head";
+@import "elements/overlay";
+
+// ------
+
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	position: relative;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	font-size: 18px;
+	line-height: 1.05;
+	font-weight: normal;
+	font-style: normal;
+	color: inherit;
+	letter-spacing: 0;
+	word-break: break-word;
+	-webkit-hyphenate-limit-chars: 10 5 5;
+	-ms-hyphenate-limit-chars: auto 10 5 5;
+	hyphenate-limit-chars: 10 5 5;
+	-webkit-hyphenate-limit-lines: 2;
+	-ms-hyphenate-limit-lines: 2;
+	hyphenate-limit-lines: 2;
+	-webkit-font-feature-settings: "kern" 1;
+	font-feature-settings: "kern" 1;
+	-webkit-font-kerning: normal;
+	font-kerning: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+html {
+	box-sizing: border-box;
+	-webkit-text-size-adjust: none;
+	line-height: 1.1;
+	width: 100vw;
+}
+
+body {
+	font-family: 'SuisseIntl-Regular', 'Helvetica', sans-serif;
+	color: black;
+	padding: .6rem .6rem;
+}
+
+/* idle styles */
+body.idle {
+	background: white;
+	.my-object {
+		background: white;
+	}
+	.fallable {
+		transform: translateY(80vh) rotate(45deg);
+	}
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+*::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: rgb(0,0,255);
+	}
+}
+
+p {
+	margin: 0;
+	max-width: 35rem;
+	& + p {
+		margin-top: .6rem;
+	}
+}
